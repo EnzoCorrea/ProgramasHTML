@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Questão 5</title>
+	
+	<style language="css">
+	
+		.tipo-fonte{
+			font-family:Arial;
+			
+		}
+		
+		#botão-resetar{
+			position: relative;
+			left: 200px;
+			cursor: pointer;
+
+		}
+		
+	</style>
+	
+	<script language="javascript"> <!-- Configuração do botão -->
+	
+		function resetForm(){
+		
+			with (document){
+			
+				getElementById("tNome").value="";
+				getElementById("tNum").value="";
+				getElementById("tNum2").value="";
+				getElementById("tEnd").value="";
+				getElementById("tNasc").value="";
+				
+			}	
+			
+		}
+		
+	</script>
+	
+</head>
+
+<body>
+
+	<table  width="500px;" cellpadding="1px;" cellspacing="1px;">
+
+		<tr>
+	
+			<th colspan="2" style="text-align: center; font-size: 2em;">Ficha Cadastral</th>
+		
+		</tr>
+
+		<tr>
+		
+			<td class="tipo-fonte">Nome:</td>
+			<td><input type="text" name="tnome" id="tNome" size="55" maxlength="55"></td>
+			
+		</tr>
+
+		<tr>
+		
+			<td class="tipo-fonte">RG:</td>
+			<td><input type="text" name="tnum" id="tNum" size="12" maxlength="13"><td>
+			<td style="position: relative; right:381px;" class="tipo-fonte">C.P.F.:</td>
+			<td><input type="text" name="tnum2" id="tNum2" size="12" maxlength="13" style="position: relative; right:332px;"></td>
+			
+		</tr>
+
+		<tr>
+		
+			<td class="tipo-fonte">Endereço:</td>
+			<td><input type="text" name="tendereço" id="tEnd" size="55" maxlength="55"></td>
+			
+		</tr>
+
+		<tr>
+		
+			<td class="tipo-fonte">Sexo:</td>
+			<td><select>
+			<option>Masculino</option>
+			<option>Feminino</option>
+			</select></td>
+			<td style="position: relative; right:288px;" class="tipo-fonte">Data Nascimento:</td>
+			<td><input type="text" name="tnasc" id="tNasc" size="12" maxlength="13" style="position: relative; right:212px;"></td>
+			
+		</tr>
+
+		<tr>
+		
+			<td class="tipo-fonte">Situação Civil:</td>
+			<td><input type="radio" name="tcivil" id="tSolt"><label for="tSolt" class="tipo-fonte">Solteiro(a)</label>
+				<input type="radio" name="tcivil" id="tCasado"><label for="tCasado" class="tipo-fonte">Casado(a)</label>
+				<input type="radio" name="tcivil" id="tViúvo"><label for="tViúvo" class="tipo-fonte">Viúvo(a)</label></td>
+				
+		</tr>
+
+		<tr>
+			
+			<td><input type="button" value="Limpar Dados" id="botão-resetar" onClick="resetForm();" /></td>
+			
+		</tr>
+
+	</table>
+
+</body>
+
+</html>
