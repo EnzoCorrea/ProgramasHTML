@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"> 
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Calculadora HTML</title>
+	
+	<link rel="stylesheet" href="css/estilo.css">
+	
+	<script type="text/javascript" src="js/JavaScript.js"></script>
+
+</head>
+
+<body>
+
+	<div class="calculadora">
+			
+		<input type="text" class="textview" id="visor" name="textview"> <!-- visor da calculadora -->
+		
+		<table>
+		
+			<tr>
+			
+				<td><input class="botão" id="coloração-comandos" type="button" value="C" onclick="resetar();"></td> <!-- reseta os valores -->
+				<td><input class="botão" id="coloração-comandos" type="button" value="pi" onclick="insere(3.14);"></td> <!-- valor aproximado de pi -->
+				<td><input class="botão" id="coloração-comandos" type="button" value="%" onclick="insere('%');"></td> <!-- resto da divisão -->
+				<td><input class="botão" id="coloração" type="button" value="/" onclick="insere('/');"></td> <!-- divisão -->
+				
+			</tr>
+			
+			<tr>
+			
+				<td><input class="botão" id="coloração-números" type="button" value="7" onclick="insere(7);"></td> <!-- valor 7 -->
+				<td><input class="botão" id="coloração-números" type="button" value="8" onclick="insere(8);"></td> <!-- valor 8 -->
+				<td><input class="botão" id="coloração-números" type="button" value="9" onclick="insere(9);"></td> <!-- valor 9 -->
+				<td><input class="botão" id="coloração" type="button" value="*" onclick="insere('*');"></td> <!-- multiplicação -->
+				
+			</tr>
+			
+			<tr>
+			
+				<td><input class="botão" id="coloração-números" type="button" value="4" onclick="insere(4);"></td> <!-- valor 4 -->
+				<td><input class="botão" id="coloração-números" type="button" value="5" onclick="insere(5);"></td> <!-- valor 5 -->
+				<td><input class="botão" id="coloração-números" type="button" value="6" onclick="insere(6);"></td> <!-- valor 6 -->
+				<td><input class="botão" id="coloração" type="button" value="+" onclick="insere('+');"></td> <!-- soma -->
+				
+			</tr>
+			
+			<tr>
+			
+				<td><input class="botão" id="coloração-números" type="button" value="1" onclick="insere(1);"></td> <!-- valor 1 -->
+				<td><input class="botão" id="coloração-números" type="button" value="2" onclick="insere(2);"></td> <!-- valor 2 -->
+				<td><input class="botão" id="coloração-números" type="button" value="3" onclick="insere(3);"></td> <!-- valor 3 -->
+				<td><input class="botão" id="coloração" type="button" value="-" onclick="insere('-');"></td> <!-- subtração -->
+				
+			</tr>
+			
+			<tr>
+			
+				<td><input class="botão" id="coloração-números" type="button" value="0" onclick="insere(0);"></td> <!-- valor 0 -->
+				<td><input class="botão" id="coloração-números" type="button" value="." onclick="insere('.');"></td> <!-- insere um ponto -->
+				<td><input class="botão-igual" id="coloração" type="button" value="=" onclick="calcular();"></td> <!-- mostra o resultado -->
+				
+			</tr>
+			
+		</table>
+
+	</div>
+
+</body>
+
+</html>
