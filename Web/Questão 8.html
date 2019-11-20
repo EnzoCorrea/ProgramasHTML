@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 8</title>
+	
+	<script>
+	
+		var mochila = ["Espada", "Mapa", "Kit de Primeiros Socorros", "Chave", "Lanterna"];//Itens da mochila
+	
+		function MochilaChave(mochila){ //Verifica se na mochila tem chave
+		
+			return mochila === "Chave"; //Retorna se a "Chave" estiver na mochila
+		
+		}
+		
+		function TemChave(){ //Procura na mochila o item "Chave"
+		
+			if (mochila.find(MochilaChave) == "Chave"){ //Se a chave estiver na mochila
+			
+				return window.alert(true); //Retorna true
+			
+			}
+			
+			else{ //Se a chave não estiver na mochila
+			
+				return window.alert(false); //Retorna false
+			
+			}
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+	
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+	
+			background-color: #00a8ff;
+	
+		}
+		
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 8</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Você é um aventureiro, que vai explorar uma masmorra<br> com o objetivo de encontrar valiosos tesouros!</p> <!-- Histórinha -->
+
+<p class="TextosDaQuestão">Você equipa a sua mochila para enfrentar qualquer desafio!</p> <!-- Histórinha -->
+
+<p class="TextosDaQuestão">Dentro de uma das salas da masmorra, você encontra um báu<br> cheio de moedas de ouro, jóias, etc. Mas, há um problema.</p> <!-- Histórinha -->
+
+<p class="TextosDaQuestão">O báu está cercado por uma porta e barras de ferro. Na qual,<br> a única maneira de acessar o báu,
+é abrindo essa porta, de ferro, com uma chave!</p> <!-- Histórinha -->
+
+<p class="TextosDaQuestão">Será que você tem a chave? Busque em sua mochila!
+<input class="EstiloBotão" type="button" value="buscar" onclick="TemChave();"></p> <!-- Chama a função -->
+
+</body>
+
+</html>

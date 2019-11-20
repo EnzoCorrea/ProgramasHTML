@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 7</title>
+	
+	<script>
+	
+		function personagemMorreu(dano, saude){ //Função para saber se o personagem morreu
+		
+			dano = document.getElementById("DanoNum").value; //Definição do parâmetro "dano"
+			saude = document.getElementById("SaudeNum").value; //Definição do parâmetro "saude"
+			
+			var VidaRestante = Number(saude) - Number(dano); //Calcula a vida depois do dano
+			
+			if (VidaRestante > 0){ //Se o dano não matar
+			
+				return window.alert(false); //Retorna false
+				
+			}
+			
+			if (VidaRestante <= 0){ //Se o dano matar
+			
+				return window.alert(true); //Retorna true
+				
+			}
+			
+		}
+	
+	</script>
+	
+	<style>
+	
+		.TextosDaQuestão{
+	
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+	
+		}
+		
+		.CamposDosNúmeros{
+	
+			font-family: Arial;
+			font-size: 25px;
+	
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+		
+		}
+		
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 7</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Digite a vida do personagem:
+
+<input type="text" class="CamposDosNúmeros" id="SaudeNum" name="textview" size="15" maxlength="20" placeholder="Saude Personagem"> <!-- Informação sobre a vida do personagem -->
+
+</p>
+
+<p class="TextosDaQuestão">Digite o dano que ele vai receber:
+
+<input type="text" class="CamposDosNúmeros" id="DanoNum" name="textview" size="15" maxlength="20" placeholder="Dano Personagem"> <!-- Informação sobre o dano que o personagem vai sofrer -->
+
+</p>
+
+<p><input type="button" name="Enviar" class="EstiloBotão" value="Verificar" onclick="personagemMorreu();"></p> <!-- Botão que chama a função -->
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 11</title>
+	
+	<script>
+	
+		function Jogar(){ //Função do jogo de adivinhação
+			
+			window.alert("Pense numa carta qualquer do baralho. Exceto o coringa/joker.\nSe quiser pode anotar em um papel para não esquecer.")
+			
+			var naipe = ["espadas", "paus", "copas", "ouros"]; //Definição dos naipes
+		
+			do{ //Looping
+		
+				var numero = Number(Math.floor((Math.random() * 13) + 1)); //Definição do número
+				
+				switch(numero){ //Definição de algumas cartas
+					
+					case 1:
+						numero = "Ás";
+						break;
+						
+					case 11:
+						numero = "Valete";
+						break;
+					
+					case 12:
+						numero = "Dama";
+						break;
+					
+					case 13:
+						numero = "Rei";
+						break;
+						
+				}
+		
+				var indNaipe = Math.floor(Math.random() * 4); //Escolha do Naipe
+		
+				var resposta = window.prompt(`Você pensou na carta ${numero} de ${naipe[indNaipe]}? Responda com (s) ou (n).`); //Menu de resposta com a possível carta
+		
+			} while (resposta == "n");
+		
+			window.alert("Aeee Acertei! Uhuuuuul!"); //Comemoração do computador
+		
+			window.alert("Obrigado por jogar!");
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+			
+		}
+		
+		#título{
+		
+			font-family: Arial;
+			text-align: center;
+		
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 11</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">O baralho é um jogo que é muito famoso em todo o mundo.</p> <!-- Histórinha -->
+
+<p class="TextosDaQuestão">Existem 13 cartas, de 4 naipes diferentes, em um baralho. Além dos coringas.</p>
+
+<p class="TextosDaQuestão">As cartas são:<br> <!-- Cartas do baralho e seus naipes -->
+<br>
+Ás; 2; 3; 4; 5; 6; 7; 8; 9; 10; Valete; Dama; Rei.<br>
+<br>
+E os naipes são:<br>
+<br>
+Espadas (♠); Paus (♣); Copas (♥); Ouros (♦).</p>
+
+<p class="TextosDaQuestão">Que tal fazermos um joguinho de adivinhação? Você pensa em uma carta, e eu tento adivinhar!</p>
+
+<p class="TextosDaQuestão">Aperte o botão, caso queira jogar:
+<input type="button" name="Enviar" class="EstiloBotão" value="Jogar" onclick="Jogar();"></p> <!-- Botão que chama a função -->
+
+</body>
+
+</html>

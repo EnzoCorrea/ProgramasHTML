@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 6</title>
+	
+	<script>
+	
+		function Conversão(){ //Função de conversão de temperatura
+
+			var F = document.getElementById("GrausFahrenheit").value; //Defini o valor de F
+			
+			var C = ((F - 32) * 5)/9 //Calcula o valor de C
+			
+			document.getElementById("VisorCelsius").value  =  C; //Mostra o Resultado de C
+		
+		}
+		
+		function ResetarValores(){ //Função de limpar os valores
+		
+			document.getElementById('VisorCelsius').value  =  " ";
+			document.getElementById('GrausFahrenheit').value  =  " ";
+		
+		}
+	
+	</script>
+	
+	<style>
+	
+		.TextosQuestão{
+	
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+	
+		}
+	
+		.Estilo{
+	
+			font-family: Arial;
+			font-size: 25px;
+		
+		}
+	
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+		
+		}
+	
+		#Coloração{
+	
+			background-color: #00a8ff;
+	
+		}
+	
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+	
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 6</h1> <!-- Número da Questão -->
+
+<p class="TextosQuestão">Bariloche é uma cidade turística por onde passam turistas dos mais variados países.<br>
+Um dos problemas que muitos turistas encontram é entender claramente às unidades<br>
+de temperatura, principalmente a equivalência entre graus Celsius e Fahrenheit.</p> <!-- Histórinha -->
+
+<p class="TextosQuestão">Para resolver esse problema de conversão de temperaturas, aqui está um programa<br> para <strong>converter</strong>, usando
+calculos físicos, <strong>temperaturas de <em>Fahrenheit</em> para o <em>Celsius</em></strong>:</p> <!-- Apresenta o conversor de temperatura -->
+
+<p class="TextosQuestão">Digite a temperatura em Fahrenheit:
+
+<input type="text" class="Estilo" id="GrausFahrenheit" name="TempFahrenheit" size="15" maxlength="20" placeholder="Fahrenheit °F"> <!-- Campo do Fahrenheit -->
+
+<input type="button" name="Enviar" class="EstiloBotão" value="Converter" onclick="Conversão();"> <!-- Chama a função de conversão -->
+
+</p>
+
+<p class="TextosQuestão">A temperatura em Celsius, depois da conversão, é:
+
+<input type="text" class="Estilo" id="VisorCelsius" name="textview" size="15" maxlength="20" placeholder="Celsius °C"> <!-- Campo do Celsius -->
+
+<input type="button" name="Limpar" class="EstiloBotão" value="Resetar" onclick="ResetarValores();"> <!-- Reseta os campos -->
+
+</p>
+
+</body>
+
+</html>

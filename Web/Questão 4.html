@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 4</title>
+	
+	<script>
+	
+		function CalcNum(){ //Função que calcula os números
+		
+			var num1 = document.getElementById("PrimeiroNum").value; //Pegar o número do primeiro campo
+			var num2 = document.getElementById("SegundoNum").value; //Pegar o número do segundo campo
+			
+			//Abre a tela de opções
+			op = Number(window.prompt("Escolha a opção de calculo: 1 -> Soma; 2 -> Diferença(Subtração); 3 -> Produto(Multiplicação); 4 -> Divisão.\nPor favor, selecione uma opção. Caso não seja selecionada uma das 4 opções, ocorrerá acontecer um erro."));
+			
+			switch(op){
+				case 1: //Faz a soma
+					window.alert(Number(num1)+Number(num2));
+					break;
+					
+				case 2: //Faz a subtração
+					window.alert(Math.abs(Number(num1)-Number(num2)));
+					break;
+				
+				case 3: //Faz a multiplicação
+					window.alert(Number(num1)*Number(num2));
+					break;
+				
+				case 4: //Faz a divisão
+					if (Number(num2) == 0){ //Se o denominador for igual a zero
+						window.alert("O denominador não pode ser zero!");
+						break;
+						
+					}
+					
+					else{ //Se o denominador for diferente de zero
+					
+						window.alert(Number(num1)/Number(num2));
+						break;
+					
+					}
+					
+				default: //Da erro, caso o usuário não escolha uma opção
+					window.alert("Erro! Escolha uma opção!");
+					break;
+
+			}
+			
+		
+		}
+		
+		function ResetarNúmeros(){ //Função de limpar os campos
+		
+			document.getElementById("PrimeiroNum").value  =  " "; //Limpa o primeiro valor
+			document.getElementById("SegundoNum").value  =  " "; //Limpa o segundo valor
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+	
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+	
+		}
+		
+		.CamposDosNúmeros{
+	
+			font-family: Arial;
+			font-size: 25px;
+	
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+	
+			background-color: #00a8ff;
+	
+		}
+		
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 4</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Operações aritméticas simples são uma constante no dia a dia das pessoas.<br>
+Para auxiliar um grupo de alunos do primeiro grau, aqui um programa<br> para calcular:
+adição, subtração, multiplicação e divisão.</p> <!-- Histórinha para explicar a situação -->
+
+<p class="TextosDaQuestão">Primeiro Número:
+
+<input type="text" class="CamposDosNúmeros" id="PrimeiroNum" name="textview" size="15" maxlength="20" placeholder="Primeiro Número..."> <!-- Campo do primeiro número -->
+
+</p>
+
+<p class="TextosDaQuestão">Segundo Número:
+
+<input type="text" class="CamposDosNúmeros" id="SegundoNum" name="textview" size="15" maxlength="20" placeholder="Segundo Número..."> <!-- Campo do segundo número -->
+
+</p>
+
+<p>
+
+<input type="button" name="Enviar" class="EstiloBotão" id="calcular-valores" value="Calcular" onclick="CalcNum();"> <!-- Botão que calcula -->
+<input type="button" name="Limpar" class="EstiloBotão" id="resetar-valores" value="Resetar" onclick="ResetarNúmeros();"> <!-- Botão que limpa os campos -->
+
+</p>
+
+</body>
+
+</html>

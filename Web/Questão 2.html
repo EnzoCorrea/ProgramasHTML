@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 2</title>
+	
+	<script>
+	
+		function Produto(){ //Função de multiplicação
+		
+			var num = document.getElementById("NumeroTabuada").value; //Estabelece que o número para o calculo é o que o usuário digitou
+			
+			
+			//Posições dos campos para o número
+			document.getElementById("PrimeiroNum").value  =  num;
+			document.getElementById("SegundoNum").value  =  num;
+			document.getElementById("TerceiroNum").value  =  num;
+			document.getElementById("QuartoNum").value  =  num;
+			document.getElementById("QuintoNum").value  =  num;
+			document.getElementById("SextoNum").value  =  num;
+			document.getElementById("SetimoNum").value  =  num;
+			document.getElementById("OitavoNum").value  =  num;
+			document.getElementById("NoveNum").value  =  num;
+			document.getElementById("DecimoNum").value  =  num;
+			
+			//Posições dos campos para o resultado final
+			document.getElementById("PrimeiroResul").value  =  Number(num) * Number(1);
+			document.getElementById("SegundoResul").value  =  Number(num) * Number(2);
+			document.getElementById("TerceiroResul").value  =  Number(num) * Number(3);
+			document.getElementById("QuartoResul").value  =  Number(num) * Number(4);
+			document.getElementById("QuintoResul").value  =  Number(num) * Number(5);
+			document.getElementById("SextoResul").value  =  Number(num) * Number(6);
+			document.getElementById("SetimoResul").value  =  Number(num) * Number(7);
+			document.getElementById("OitavoResul").value  =  Number(num) * Number(8);
+			document.getElementById("NoveResul").value  =  Number(num) * Number(9);
+			document.getElementById("DecimoResul").value  =  Number(num) * Number(10);
+			
+		}
+		
+		function ResetarNums(){ //Função que reseta todos os números
+		
+			document.getElementById("NumeroTabuada").value = " ";
+			document.getElementById("PrimeiroNum").value  =  " ";
+			document.getElementById("SegundoNum").value  =  " ";
+			document.getElementById("TerceiroNum").value  =  " ";
+			document.getElementById("QuartoNum").value  =  " ";
+			document.getElementById("QuintoNum").value  =  " ";
+			document.getElementById("SextoNum").value  =  " ";
+			document.getElementById("SetimoNum").value  =  " ";
+			document.getElementById("OitavoNum").value  =  " ";
+			document.getElementById("NoveNum").value  =  " ";
+			document.getElementById("DecimoNum").value  =  " ";
+			document.getElementById("PrimeiroResul").value  =  " ";
+			document.getElementById("SegundoResul").value  =  " ";
+			document.getElementById("TerceiroResul").value  =  " ";
+			document.getElementById("QuartoResul").value  =  " ";
+			document.getElementById("QuintoResul").value  =  " ";
+			document.getElementById("SextoResul").value  =  " ";
+			document.getElementById("SetimoResul").value  =  " ";
+			document.getElementById("OitavoResul").value  =  " ";
+			document.getElementById("NoveResul").value  =  " ";
+			document.getElementById("DecimoResul").value  =  " ";
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.CampoNúmero{
+		
+			font-family: Arial;
+			font-size: 25px;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+
+		}
+		
+		.NumerosTab{
+		
+			font-family: Arial;
+			font-size: 18px;
+			text-align: center;
+		
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+		
+		}
+		
+		#título{
+		
+			font-family: Arial;
+			text-align: center;
+		
+		}
+		
+		#tabela{
+		
+			font-family: Arial;
+			font-size: 25px;
+		
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 2</h2> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Matemática foi o "bicho papão" para alguns alunos. Portanto,<br> aqui vai
+a tabuada, até 10x, de um número que você pode digitar.</p> <!-- Tabuada de um número  -->
+
+<p class="TextosDaQuestão">Digite um número para saber a sua tabuada:
+
+<input type="text" class="CampoNúmero" id="NumeroTabuada"name="NumTabuada" size="13" maxlength="20" placeholder="Número da tabuada"> <!-- Campo para digitar o número -->
+
+<input type="button" name="Enviar" class="EstiloBotão" value="Multiplicar" onclick="Produto();"> <!-- Botão que chama a função de produto -->
+<input type="button" name="Limpar" class="EstiloBotão" value="Resetar" onclick="ResetarNums();"> <!-- Botão que reseta os números -->
+
+</p>
+
+<table id="tabela"> <!-- Tabela dos Resultados -->
+
+	<tbody>
+
+		<tr>
+	
+			<th>Número</th>
+			<th>Operador</th>
+			<th>Algoritmo</th>
+			<th>Igual</th>
+			<th>Resultado</th>
+		
+		</tr>
+	
+		<tr>
+	
+			<th><input id="PrimeiroNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>1</th>
+			<th>=</th>
+			<th><input id="PrimeiroResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="SegundoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>2</th>
+			<th>=</th>
+			<th><input id="SegundoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="TerceiroNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>3</th>
+			<th>=</th>
+			<th><input id="TerceiroResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="QuartoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>4</th>
+			<th>=</th>
+			<th><input id="QuartoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="QuintoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>5</th>
+			<th>=</th>
+			<th><input id="QuintoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="SextoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>6</th>
+			<th>=</th>
+			<th><input id="SextoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="SetimoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>7</th>
+			<th>=</th>
+			<th><input id="SetimoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="OitavoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>8</th>
+			<th>=</th>
+			<th><input id="OitavoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="NoveNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>9</th>
+			<th>=</th>
+			<th><input id="NoveResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+		<tr>
+	
+			<th><input id="DecimoNum" class="NumerosTab" size="5" maxlength="3"></th>
+			<th>X</th>
+			<th>10</th>
+			<th>=</th>
+			<th><input id="DecimoResul" class="NumerosTab" size="10"></th>
+	
+		</tr>
+	
+	</tbody>
+	
+</table>
+
+</body>
+
+</html>

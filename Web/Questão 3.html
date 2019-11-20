@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 3</title>
+	
+	<script>
+		
+		function PrepOrdenar(){ //Montagem dos números para o vetor
+		
+			var PrimeiraPosicao = Number(window.prompt("Digite o Primeiro Número:")); //Primeiro Número
+			var SegundaPosicao = Number(window.prompt("Digite o Segundo Número:")); //Segundo Número
+			var TerceiraPosicao = Number(window.prompt("Digite o Terceiro Número:")); //Terceiro Número
+			var QuartaPosicao = Number(window.prompt("Digite o Quarto Número:")); //Quarto Número
+			var QuintaPosicao = Number(window.prompt("Digite o Quinto Número:")); //Quinto Número
+			var SextaPosicao = Number(window.prompt("Digite o Sexto Número:")); //Sexto Número
+			var SetimaPosicao = Number(window.prompt("Digite o Sétimo Número:")); //Sétimo Número
+			var OitavaPosicao = Number(window.prompt("Digite o Oitavo Número:")); //Oitavo Número
+			var NonaPosicao = Number(window.prompt("Digite o Nono Número:")); //Nono Número
+			var DecimaPosicao = Number(window.prompt("Digite o Décimo Número:")); //Décimo Número
+		
+			var vetor = [ //Vetor com os números
+		
+				PrimeiraPosicao,
+				SegundaPosicao,
+				TerceiraPosicao,
+				QuartaPosicao,
+				QuintaPosicao,
+				SextaPosicao,
+				SetimaPosicao,
+				OitavaPosicao,
+				NonaPosicao,
+				DecimaPosicao
+
+			];
+			
+			function OrdenaNum(a, b){ //Função que ordena em ordem crescente
+				
+				return a - b;
+			
+			}
+			
+			window.alert(`O vetor ordenado é: ${vetor.sort(OrdenaNum)}!`); //Resultado Final
+
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+			
+		}
+		
+		#título{
+		
+			font-family: Arial;
+			text-align: center;
+		
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 3</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Vamos ordenar um vetor!</p> <!-- Textinho -->
+
+<p class="TextosDaQuestão">Aperte o botão para começar:
+
+<input type="button" name="Enviar" class="EstiloBotão" value="Iniciar" onclick="PrepOrdenar();"> <!-- Textinho com um botão, para chamar a função -->
+
+</p>
+
+</body>
+
+</html>

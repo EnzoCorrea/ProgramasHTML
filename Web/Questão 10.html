@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 10</title>
+	
+	<script>
+			
+			var exibir = function Carta(pNumero, pNaipe){ //Define a exibição da carta
+			
+				this.numero = pNumero;
+				this.naipe = pNaipe;
+				
+					switch(this.numero){
+					
+						case 1: //Se for Ás
+							console.log(`Ás de ${this.naipe}`);
+							break;
+						
+						case 11: //Se for Valete
+							console.log(`Valete de ${this.naipe}`);
+							break;
+					
+						case 12: //Se for Dama/Rainha
+							console.log(`Dama de ${this.naipe}`);
+							break;
+					
+						case 13: //Se for Rei
+							console.log(`Rei de ${this.naipe}`);
+							break;
+					
+						default: //Se for qualquer outro número 
+							console.log(`${this.numero} de ${this.naipe}`);
+							break;
+						
+					}
+				
+			}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+	
+		#Coloração{
+	
+			background-color: #00a8ff;
+	
+		}
+	
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 10</h1> <!-- Número da Questão -->
+
+<!-- Informações de uso -->
+<p class="TextosDaQuestão">Use o console.
+Para acessar o console use o botão direito do mouse<br> e aperte em inspecionar, ou use o atalho Ctrl + Shift + I.</p> <!-- Informações de uso -->
+
+<p class="TextosDaQuestão">Para que a carta seja exibida, digite:<br>exibir(número da carta, "espadas" ou "paus" ou "copas" ou "ouros").</p>
+
+</body>
+
+</html>

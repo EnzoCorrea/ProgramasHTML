@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 12</title>
+	
+	<script>
+	
+		function jogar(){ //Função para jogar
+
+			var jogadaUser; //Definição das variáveis
+			var jogadaPC;
+			var gameover = false;
+			var totalPontuacao = 0;
+
+			window.alert("Bem vindo, Jogador!");
+		
+			do{ //Looping
+			
+				jogadaUser = Number(window.prompt("Escolha a sua jogada:\n1 -> Pedra;\n2 -> Papel;\n3 -> Tesoura.")); //Menu de jogada
+				
+				if (jogadaUser > 0 && jogadaUser <= 3){ //Condição de jogada válida
+				
+					jogadaPC = Number(Math.floor((Math.random() * 3) + 1)); //Jogada do computador
+					
+					switch(jogadaPC){ //Mensagem que mostra a jogada do computador
+					
+						case 1:
+							window.alert("O computador jogou Pedra!");
+							break;
+							
+						case 2:
+							window.alert("O computador jogou Papel!");
+							break;
+						
+						case 3:
+							window.alert("O computador jogou Tesoura!");
+							break;
+					
+					}
+				
+					if (jogadaUser == 1 && jogadaPC == 1){ //Condições para os possíveis resultados
+						window.alert("A rodada empatou!");
+				
+					}
+				
+					else if (jogadaUser == 2 && jogadaPC == 2){
+						window.alert("A rodada empatou!");
+				
+					}
+				
+					else if (jogadaUser == 3 && jogadaPC == 3){
+						window.alert("A rodada empatou!");
+				
+					}
+				
+					else if (jogadaUser == 1 && jogadaPC == 3){
+						window.alert("Você ganhou!");
+						totalPontuacao++;
+					
+					}
+				
+					else if (jogadaUser == 2 && jogadaPC == 1){
+						window.alert("Você ganhou!");
+						totalPontuacao++;
+				
+					}
+				
+					else if (jogadaUser == 3 && jogadaPC == 2){
+						window.alert("Você ganhou!");
+						totalPontuacao++;
+				
+					}
+				
+					else if (jogadaUser == 1 && jogadaPC == 2){
+						window.alert("Você perdeu!");
+						gameover = true;
+				
+					}
+				
+					else if (jogadaUser == 2 && jogadaPC == 3){
+						window.alert("Você perdeu!");
+						gameover = true;
+				
+					}
+				
+					else if (jogadaUser == 3 && jogadaPC == 1){
+						window.alert("Você perdeu!");
+						gameover = true;
+				
+					}
+
+				}
+				
+				else{ //Condição de jogada inválida
+					window.alert("Escolha uma opção válida!");
+					gameover = true;
+				
+				}
+
+			} while (gameover === false);
+			
+			window.alert(`Fim de Jogo! A sua pontuação foi de ${totalPontuacao} pontos.`); //Exibi o resultado final
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+	
+		#Coloração{
+		
+			background-color: #00a8ff;
+			
+		}
+		
+		#título{
+		
+			font-family: Arial;
+			text-align: center;
+		
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 12</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">O jogo de origem japonesa, Pedra, Papel ou Tesoura(Jokenpô), é antigo,<br> muito provavelmente do tempo dos seus avós,
+mas ainda exerce certa<br> magia em gente pequena e gente grande. Tanto que existem
+sites na<br> internet destinados somente à brincadeira pedra, papel e tesoura, sabia?</p> <!-- Histórinha sobre Jokenpô -->
+
+<p class="TextosDaQuestão">Vamos jogar, Jokenpô!</p> <!-- Vamos lá, vai ser legal -->
+
+<p class="TextosDaQuestão">As opções de jogada são:<br> <!-- Informações sobre as opções de jogada -->
+
+[ 1 ] para Pedra;<br>
+
+[ 2 ] para Papel;<br>
+
+[ 3 ] para Tesoura.</p>
+
+<p class="TextosDaQuestão">Aperte o botão para iniciar o jogo:
+
+<input type="button" name="Enviar" class="EstiloBotão" value="Iniciar" onclick="jogar();"> <!-- Botão para iniciar o jogo e a função -->
+
+</p>
+
+</body>
+
+</html>

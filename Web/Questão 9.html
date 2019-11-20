@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 9</title>
+	
+	<script>
+	
+		function LimitaPosicao(posicao){ //Função que verifica a posição
+		
+			posicao = document.getElementById("PosicaoNum").value; //Definição do parâmetro
+			
+			var PosicaoTela = Number(posicao); //Pega a posição a partir do parâmetro
+		
+			if (PosicaoTela > 100){ //Posição inválida do lado direito
+			
+				return window.alert(`Posição inválida! A posição correta deveria ser ${Math.random().toFixed(2) * 100} pixels!`);//Mensagem de retorno
+			
+			}
+			
+			if (PosicaoTela < 0){ //Posição inválida do lado esquedo
+			
+				return window.alert(`Posição inválida! A posição correta deveria ser ${Math.random().toFixed(2) * 100} pixels!`);//Mensagem de retorno
+			
+			}
+			
+			if (0 > PosicaoTela < 100){ //Posição válida, entre 0 e 100
+			
+				return window.alert("A posição é válida!");
+			
+			}
+		
+		}
+	
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+	
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+	
+		}
+		
+		.CamposDosNúmeros{
+	
+			font-family: Arial;
+			font-size: 25px;
+	
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+		
+		}
+		
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 9</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Qual a posição do personagem:
+
+<input type="text" class="CamposDosNúmeros" id="PosicaoNum" name="textview" size="15" maxlength="20" placeholder="Posição Personagem"> <!-- Definição da posição do personagem -->
+
+</p>
+
+<p><input type="button" name="Enviar" class="EstiloBotão" value="Verificar" onclick="LimitaPosicao();"></p> <!-- Chama a função -->
+
+</body>
+
+</html>

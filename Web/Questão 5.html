@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 5</title>
+	
+	<script>
+			
+		function votar(){ //Função para simular uma urna eletrônica
+		
+			//Definição das variáveis
+			var titulo;
+			var totalOswaldo = 0;
+			var totalPedro = 0;
+			
+			do{ //Funcionamento do looping
+
+				titulo = Number(prompt("Digite seu titulo de eleitor:")); //Número do título
+
+				if (titulo >= 0){ //Se for maior ou igual a 0
+				
+					var voto = Number(window.prompt("Número 1 para votar no Oswaldo, Partido do Saber.\nNúmero 2 para votar no Pedro, Partido do Aprender.")); //Voto
+					
+					switch(voto){ //Situação dos votos
+					
+						case 1: //Caso vote 1
+							totalOswaldo++;
+							break;
+						
+						case 2: //Caso vote 2
+							totalPedro++;
+							break;
+						
+						default: //Caso seja nulo
+							window.alert("Voto Nulo!");
+							break;
+					
+					}
+					
+					window.alert("Parabéns, Cidadão!"); //Parabeniza o usuário
+				
+				}
+			
+			} while (titulo >= 0); //Cria o looping
+			
+			window.alert(`Resultados: Oswaldo teve ${totalOswaldo} votos. Pedro teve ${totalPedro} votos.`); //Exibi os resultados
+			
+			if (totalOswaldo > totalPedro){ //Se Oswaldo ganhar
+			
+				window.alert("Oswaldo foi Eleito!");
+			
+			}
+			
+			else if (totalOswaldo == totalPedro){ //Se empatar
+			
+				window.alert("A eleição empatou!");
+			
+			}
+			
+			else{ //Se Pedro ganhar
+			
+				window.alert("Pedro foi Eleito!");
+			
+			}
+
+
+		}
+
+	</script>
+
+	<style>
+	
+		.TextosDaQuestão{
+		
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+		
+		}
+		
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+	
+		#Coloração{
+		
+			background-color: #00a8ff;
+			
+		}
+		
+		#título{
+		
+			font-family: Arial;
+			text-align: center;
+		
+		}
+	
+	</style>
+
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 5</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Bem vindo, Cidadão! É hora da votação!</p> <!-- É chegada hora de votar -->
+
+<p class="TextosDaQuestão">Para votar:</p> <!-- Informação sobre a votação -->
+
+<p class="TextosDaQuestão">Candidato Oswaldo, do Partido do Saber -> Aperte o Número 1.<br>
+Canditado Pedro, do Partido do Aprender -> Aperte o Número 2.</p> <!-- Número dos Partidos -->
+
+<p class="TextosDaQuestão">Para começar a votar, aperte no botão:
+
+<input type="button" name="Enviar" class="EstiloBotão" id="ativar-voto" value="Começar" onclick="votar();"> <!-- Chama a função para o usuário votar -->
+
+</p>
+
+</body>
+
+</html>

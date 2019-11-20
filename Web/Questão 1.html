@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Questão 1</title>
+	
+	<script>
+		
+		function ResetarNúmeros(){ //Função de limpar os valores
+		
+			document.getElementById("primeiro-número").value  =  " "; //Limpa o primeiro valor
+			document.getElementById("segundo-número").value  =  " "; //Limpa o segundo valor
+		
+		}
+		
+		function soma(){ //Função que soma os valores
+		
+			var num1 = document.getElementById("primeiro-número").value; //Pegar o número do primeiro campo
+			var num2 = document.getElementById("segundo-número").value; //Pegar o número do segundo campo
+			var S = Number(num1) + Number(num2); //Cria o resultado da variavel soma
+			
+			//Se for igual
+			if (S == 100){
+			
+				window.alert(`O resultado da soma é ${S}, portanto é igual à 100!`);
+			
+			}
+			
+			//Se for maior
+			if (S > 100) {
+			
+				window.alert(`O resultado da soma é ${S}, portanto é maior que 100!`);
+			
+			}
+			
+			//Se for menor
+			if (S < 100) {
+			
+				window.alert(`O resultado da soma é ${S}, portanto é menor que 100!`);
+			
+			}
+			
+		}
+
+	</script>
+	
+	<style>
+	
+		.TextosDaQuestão{
+	
+			font-family: Arial;
+			font-size: 30px;
+			text-align: justify;
+	
+		}
+	
+		.CamposDosNúmeros{
+	
+			font-family: Arial;
+			font-size: 25px;
+	
+		}
+	
+		.EstiloBotão{
+	
+			font-family: Arial;
+			font-size: 25px;
+			cursor: pointer;
+	
+		}
+		
+		#Coloração{
+		
+			background-color: #00a8ff;
+		
+		}
+	
+		#título{
+	
+			font-family: Arial;
+			text-align: center;
+	
+		}
+	
+	</style>
+	
+</head>
+
+<body id="Coloração">
+
+<h1 id="título">Questão 1</h1> <!-- Número da Questão -->
+
+<p class="TextosDaQuestão">Primeiro número:
+
+<input type="text" class="CamposDosNúmeros" id="primeiro-número" name="textview" size="15" maxlength="20" placeholder="Primeiro Número..."> <!-- Definição do primeiro número -->
+
+</p>
+		
+<p class="TextosDaQuestão">Segundo número:
+<input type="text" class="CamposDosNúmeros" id="segundo-número" name="textview" size="15" maxlength="20" placeholder="Segundo Número..."> <!-- Definição do segundo número -->
+
+<input type="button" name="Enviar" class="EstiloBotão" id="somar-valores" value="Somar" onclick="soma();"> <!-- Botão que soma e mostra o resultado -->
+<input type="button" name="Limpar" class="EstiloBotão" id="resetar-valores" value="Resetar" onclick="ResetarNúmeros();"> <!-- Botão que reseta os campos -->
+
+</p>
+
+</body>
+
+</html>
